@@ -89,6 +89,7 @@ module "hashistack-us-east" {
   environment_name         = "${random_id.environment_name.hex}"
   remote_regions           = ["us-west-2"]
   instance_profile         = "${module.hashistack-instance-profile.policy}"
+  instance_type            = "m4.large"
   ssh_key_name             = "${random_id.environment_name.hex}-us-east"
   public_key_data          = "${module.ssh.public_key_data}"
   private_key_data         = "${module.ssh.private_key_data}"
