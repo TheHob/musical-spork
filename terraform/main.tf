@@ -157,7 +157,6 @@ module "mysql-database" {
   environment_name         = "${random_id.environment_name.hex}"
   ssh_key_name             = "${random_id.environment_name.hex}-database"
   instance_profile         = "${module.hashistack-instance-profile.policy}"
-  instance_type            = "m4.large"
   public_key_data          = "${module.ssh.public_key_data}"
   private_key_data         = "${module.ssh.private_key_data}"
   subnet_ids               = "${module.vpc-east.public_subnets}"
