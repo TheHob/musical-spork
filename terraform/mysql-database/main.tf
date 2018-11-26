@@ -25,7 +25,7 @@ resource "aws_key_pair" "main" {
 
 resource "aws_instance" "db" {
   ami               = "${data.aws_ami.hashistack.id}"
-  instance_type     = "t2.small"
+  instance_type     = "${var.instance_type}"
   count             = 1
   subnet_id         = "${var.subnet_ids[0]}"
   key_name          = "${var.ssh_key_name}"
