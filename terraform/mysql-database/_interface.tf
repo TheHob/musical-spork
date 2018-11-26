@@ -14,7 +14,7 @@ variable "subnet_ids" {
 }
 
 variable "instance_type" {
-  default     = "t2.small"
+  default     = "t2.micro"
   description = "AWS instance type to use eg m4.large"
 }
 
