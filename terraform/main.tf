@@ -88,6 +88,7 @@ module "hashistack-us-east" {
   environment_name         = "${random_id.environment_name.hex}"
   remote_regions           = ["us-west-2"]
   instance_profile         = "${module.hashistack-instance-profile.policy}"
+  instance_type            = "t2.small"
   ssh_key_name             = "${random_id.environment_name.hex}-us-east"
   public_key_data          = "${module.ssh.public_key_data}"
   private_key_data         = "${module.ssh.private_key_data}"
@@ -110,6 +111,7 @@ module "hashistack-us-west" {
   environment_name         = "${random_id.environment_name.hex}"
   remote_regions           = ["us-east-1"]
   instance_profile         = "${module.hashistack-instance-profile.policy}"
+  instance_type            = "t2.small"
   ssh_key_name             = "${random_id.environment_name.hex}-us-west"
   public_key_data          = "${module.ssh.public_key_data}"
   private_key_data         = "${module.ssh.private_key_data}"
@@ -133,6 +135,7 @@ module "admin-east" {
   remote_regions                   = ["us-west-2"]
   ssh_key_name                     = "${random_id.environment_name.hex}-admin"
   instance_profile                 = "${module.hashistack-instance-profile.policy}"
+  instance_type                    = "t2.small"
   public_key_data                  = "${module.ssh.public_key_data}"
   private_key_data                 = "${module.ssh.private_key_data}"
   subnet_ids                       = "${module.vpc-east.public_subnets}"
