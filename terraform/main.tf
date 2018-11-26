@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-1"
 }
-# Comment 2
+# Comment 3
 
 provider "aws" {
   alias  = "east"
