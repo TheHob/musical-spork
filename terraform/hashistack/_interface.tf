@@ -24,7 +24,7 @@ variable "cluster_size" {
 }
 
 variable "instance_type" {
-  default     = "t2.large"
+  default     = "m4.large"
   description = "AWS instance type to use"
 }
 
